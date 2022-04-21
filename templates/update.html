@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Update Information {% endblock %}</h1>
+    <form method="POST" action="/update/">
+       <label for="cemail">Current Email</label>
+       <br>
+       <input type="text" name="cemail"
+              placeholder="e.g. myemail@example.com"
+              value="{{ request.form['cemail'] }}"></input>
+       <br>
+       <label for="nemail">New Email</label>
+       <br>
+       <input type="text" name="nemail"
+              placeholder="e.g. myemail@example.com"
+              value="{{ request.form['nemail'] }}"></input>
+       <br>
+       <button type="submit">Update</button>
+    </form>
+{% endblock %}

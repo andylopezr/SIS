@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Delete User {% endblock %}</h1>
+    <form method="POST" action="/delete/">
+       <label for="del_id">Enter ID</label>
+       <br>
+       <input type="text" name="del_id"
+              placeholder="ID to delete"
+              value="{{ request.form['del_id'] }}"></input>
+       <br>
+       <button type="submit">Delete</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} to SIS</title>
+    <style>
+        html {
+            font-family: 'Epilogue', sans-serif;
+        }
+        img {
+            max-width: 30%;
+            height: auto;
+        }
+        .message {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 0px;
+            margin: 0px;
+        }
+        nav a {
+            color: #f44336;
+            font-size: 1.8em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+
+        .alert {
+            padding: 20px;
+            margin: 5px;
+            color: #ffffff;
+            background-color: #f44336;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            color: #183156;
+            padding: 0;
+        }
+
+        button {
+            margin-top: 1em;
+            background-color: #f44336;
+            color: #ffffff;;
+        }
+
+        h1 {
+            color: #183156;
+        }
+        .home {
+            padding-top: 1em;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3em;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('create') }}">Create</a>
+        <a href="{{ url_for('all') }}">All Regs</a>
+        <a href="{{ url_for('update') }}">Update</a>
+        <a href="{{ url_for('delete') }}">Delete</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% for message in get_flashed_messages() %}
+            <div class="alert">{{ message }}</div>
+        {% endfor %}
+        {% block content %} {% endblock %}
+    </div>
+</body>
+<footer>
+    <div class=footer>Andres Lopez 2022</div>
+</footer>
+</html>

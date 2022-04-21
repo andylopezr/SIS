@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <img src="https://www.sis.co/sis/assets/imagenes_logo/logo.png" width="200px" alt="sis logo">
+    <h1>{% block title %} Welcome {% endblock %}</h1>
+    <div class="home">
+        Click <a href="{{ url_for('create') }}">here</a> or on the create tab to create a new user
+    </div>
+{% endblock %}
