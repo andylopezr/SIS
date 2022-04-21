@@ -1,7 +1,7 @@
 # REST API With Flask & SQL Alchemy
 
 <img src="https://www.ncrts.com/public/images/webapp-banner.jpg">
-> Form Database CRUD API using Python, Flask, SQL Alchemy and Marshmallow for SIS to register 3 fields, store the regs in a SQLite DB and logs the creation event in a creation.log file. It flashes custom messages for specific event types and errors.
+> Form Database CRUD API using Python, Flask, SQL Alchemy and Marshmallow for SIS to register 3 fields, store the regs in a SQLite DB and logs the creation event in a creation.log file. It flashes custom messages for specific event types and errors. I also implemented Basic Authentication using Flask-httpauth.
 
 ## How to run it
 
