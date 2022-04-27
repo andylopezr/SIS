@@ -7,6 +7,8 @@
 
 ``` bash
 # Install dependencies:
+# First Install pipenv if you don't have it:
+pip install --user pipenv
 pipenv shell
 pipenv install
 # Run Server (http://localhost:5000)
